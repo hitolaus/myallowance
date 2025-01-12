@@ -1,0 +1,90 @@
+<html lang="da">
+    <head>
+        <title>Lommepenge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link rel="stylesheet" href="icons/MingCute.css">
+        <link rel="stylesheet" href="style.css" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    </head>
+    <body>
+        <div id="page-main" class="page active">
+            <nav>
+                <span></span>
+                <span class="nav--title"></span>
+                <a href="#page-pin" class="nav-link"><span class="mgc_user_lock_line"></span></a>
+            </nav>
+            <div class="container">
+                <h1>Hej Adelina,</h1>
+                Du har opsparet
+                <section id="total">
+                    ...
+                </section>
+                
+                <section id="transactions">
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                    <div class="loading-skeleton"></div>
+                </section>    
+            </div>
+        </div>
+        <div id="page-pin" class="page">
+            <nav>
+                <a href="#page-main" class="nav-link"><span class="mgc_left_line"></span></a>
+                <span class="nav--title">PIN</span>
+                <span></span>
+            </nav>
+            <section class="container">
+                <div class="pin-container">
+                    <div class="pin">
+                        <div class="pin-input active"></div>
+                        <div class="pin-input"></div>
+                        <div class="pin-input"></div>
+                        <div class="pin-input"></div>
+                    </div>
+                </div>
+                <div class="pin-numpad">
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key"></div>
+                    <div class="key">0</div>
+                    <div class="key"><span class="mgc_delete_back_line"></span></div>
+                </div>
+            </section>
+        </div>
+        <div id="page-add-transaction" class="page">
+            <nav>
+                <span></span>
+                <span class="nav--title">Transaction</span>
+                <a href="#page-main" class="nav-link"><span class="mgc_close_line"></span></a>
+            </nav>
+            <section class="container">
+                <section class="input-group">
+                    <label for="amount-input"></label>
+                    <input type="number" placeholder="Amount" id="amount-input"/>
+                    <label for="note-input"></label>
+                    <input type="text" placeholder="Note" id="note-input"/>
+                    <section class="button-group">
+                        <button class="earn" onclick="earn()">Earn</button>
+                        <button class="burn" onclick="burn()">Burn</button>
+                    </section>
+                </section>
+                
+            </section>
+        </div>
+
+        <script src="app.js" defer></script>
+    </body>
+</html>

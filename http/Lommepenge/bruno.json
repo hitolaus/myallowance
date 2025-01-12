@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Lommepenge",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

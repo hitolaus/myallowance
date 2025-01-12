@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*height: 100%;*/
+    width: 100%;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    background-color: #E8E8F5;
+    min-height: calc(100% + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+}
+
+h1, h2, h3, h4, label {
+    color: #250EAD;
+}
+
+#total {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 1em 0;
+}
+
+.page {
+    display: none;
+    width: 100%;
+}
+
+.page.active {
+    display: inline-block;
+}
+
+.page .container {
+    padding: 0 2em 2em 2em;
+    height: calc(100vh - 5em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    padding: 1em;
+    color: #250EAD;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav :nth-child(2) {
+    justify-self: center;
+}
+
+nav :nth-child(3) {
+    justify-self: end;
+}
+
+#transactions .loading-skeleton {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1em;
+    height: 4.5em;
+    margin-bottom: 1em;
+}
+
+.transaction {
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.transaction:last-child {
+    margin-bottom: 0px;
+}
+
+.transaction--date {
+    opacity: 0.3;
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.transaction--note {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.transaction--expense {
+    font-weight: bold;
+    color: red;
+    text-align: end;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.transaction--income {
+    font-weight: bold;
+    color: green;
+    text-align: end;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.pin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pin {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.pin .pin-input {
+    background-color: white;
+    border-radius: 15pt;
+    border: 1px solid black;
+    width: 75px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em
+}
+
+.pin-numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: -2em;
+    margin-right: -2em;
+    border-top: 2px solid #ccc;
+}
+
+.pin-numpad .key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 75px;
+    font-size: 1.25em;
+}
+
+
+.pin-numpad .key:active {
+    background-color: #ccc;
+}
+
+.input-group {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 10pt;
+    font-size: 1em;
+    padding: 1em;
+}
+
+input[type=text].error, input[type=number].error {
+    border: 2px solid red;
+}
+
+.button-group {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    color: white;
+    background-color: #250EAD;
+    font-weight: bold;
+    border: none;
+    border-radius: 10pt;
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+}
+
+button.earn {
+    background-color: green;
+}
+
+button.burn {
+    background-color: red;
+}
