@@ -21,7 +21,8 @@ export class FrontendStack extends cdk.Stack {
         bucketName: 'lommepenge-179454298130',
         encryption: BucketEncryption.S3_MANAGED,
         publicReadAccess: false,
-        removalPolicy: cdk.RemovalPolicy.DESTROY
+        removalPolicy: cdk.RemovalPolicy.DESTROY,
+        autoDeleteObjects: true
     });
   }
 
